@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Page</title>
+    <title>Warm Tone Page</title>
     <style>
         * {
             margin: 0;
@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             scroll-behavior: smooth;
-            background: linear-gradient(135deg, #131313, #3a3a3a);
+            background: linear-gradient(135deg, #FF7E5F, #FD3A69); /* เปลี่ยนเป็นโทนสีส้มแดง */
             font-family: 'Helvetica Neue', sans-serif;
             position: relative;
             overflow: hidden;
@@ -36,14 +36,14 @@
 
         h1 a {
             font-size: 90px;
-            color: #000000;
+            color: #FFB85C; /* สีเหลืองทอง */
             text-decoration: none;
             text-transform: uppercase;
         }
 
         h2 a {
             font-size: 90px;
-            color: #BF2E97;
+            color: #FF6F61; /* สีส้มแดง */
             text-decoration: none;
             text-transform: uppercase;
             text-align: center;
@@ -51,7 +51,7 @@
 
         .popover {
             display: none;
-            box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, .7);
         }
 
         .popover:target {
@@ -72,8 +72,8 @@
             position: relative;
             width: 0;
             height: 0;
-            color: #c53535;
-            background-color: #191919;
+            color: #FFA07A; /* สีส้มอ่อน */
+            background-color: #331A0A; /* สีน้ำตาลเข้ม */
             animation: 1s grow ease forwards;
             text-align: center;
         }
@@ -85,7 +85,7 @@
         .nav_list a {
             text-decoration: none;
             font-size: 50px;
-            color: #aa3535;
+            color: #E57373; /* สีแดงอ่อน */
         }
 
         .nav_list_item {
@@ -109,7 +109,7 @@
             width: 0px;
             left: 0;
             bottom: 10px;
-            background: #BF2E97;
+            background: #FFB85C; /* สีเหลืองทอง */
             transition: all .5s ease;
         }
 
@@ -134,8 +134,8 @@
             font-size: 30px;
             align-items: center;
             justify-content: center;
-            background-color: #BF2E97;
-            color: #b63c3c;
+            background-color: #FF6F61; /* สีส้มแดง */
+            color: #331A0A; /* สีน้ำตาลเข้ม */
             content: "×";
             cursor: pointer;
             opacity: 0;
@@ -145,7 +145,7 @@
         .animated-background .circle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(191, 46, 151, 0.7);
+            background: rgba(255, 128, 64, 0.7); /* สีส้ม */
             animation: move 5s infinite;
         }
 
@@ -167,7 +167,7 @@
             position: absolute;
             bottom: 20px;
             left: 20px;
-            color: white;
+            color: #FFB85C; /* สีเหลืองทอง */
             font-size: 24px;
             opacity: 0;
             animation: fadeIn 2s forwards 1s;
@@ -215,9 +215,10 @@
         <h2><a href="#">Subheading</a></h2>
 
         <ul class="nav_list">
-            <li><a href="#link1">Link 1</a></li>
-            <li><a href="#link2">Link 2</a></li>
-            <li><a href="#link3">Link 3</a></li>
+            <li><a href="ประวัติ.html">ประวัติ</a></li>
+            <li><a href="สถานที่ที่ชอบ.html">สถานที่ที่ชอบ 2</a></li>
+            <li><a href="สิ่งที่ชอบ.html">สิ่งที่ชอบ 3</a></li>
+            <li><a href="อาหารที่ชอบ.html">อาหารที่ชอบ</a></li>
         </ul>
 
         <div class="popover" id="popover">
