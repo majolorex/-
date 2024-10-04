@@ -36,22 +36,26 @@
 
         h1 a {
             font-size: 90px;
-            color: #FFB85C; /* สีเหลืองทอง */
+            color: #FFD700; /* สีทอง */
+            font-weight: 900; /* เพิ่มความหนาของฟอนต์ */
             text-decoration: none;
             text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้ตัวอักษร */
         }
 
         h2 a {
             font-size: 90px;
-            color: #FF6F61; /* สีส้มแดง */
+            color: #FF4500; /* สีส้มแดงเข้ม */
+            font-weight: 700; /* เพิ่มความหนาของฟอนต์ */
             text-decoration: none;
             text-transform: uppercase;
             text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้ตัวอักษร */
         }
 
         .popover {
             display: none;
-            box-shadow: 0px 6px 8px rgba(0, 0, 0, .7);
+            box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
         }
 
         .popover:target {
@@ -85,7 +89,9 @@
         .nav_list a {
             text-decoration: none;
             font-size: 50px;
-            color: #E57373; /* สีแดงอ่อน */
+            color: #FF6347; /* สีแดงเข้ม */
+            font-weight: 600; /* เพิ่มความหนาของฟอนต์ */
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
         }
 
         .nav_list_item {
@@ -109,7 +115,7 @@
             width: 0px;
             left: 0;
             bottom: 10px;
-            background: #FFB85C; /* สีเหลืองทอง */
+            background: #FFD700; /* สีทอง */
             transition: all .5s ease;
         }
 
@@ -134,7 +140,7 @@
             font-size: 30px;
             align-items: center;
             justify-content: center;
-            background-color: #FF6F61; /* สีส้มแดง */
+            background-color: #FF6347; /* สีแดงเข้ม */
             color: #331A0A; /* สีน้ำตาลเข้ม */
             content: "×";
             cursor: pointer;
@@ -167,8 +173,10 @@
             position: absolute;
             bottom: 20px;
             left: 20px;
-            color: #FFB85C; /* สีเหลืองทอง */
+            color: #FFD700; /* สีทอง */
             font-size: 24px;
+            font-weight: 600; /* เพิ่มความหนาของฟอนต์ */
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
             opacity: 0;
             animation: fadeIn 2s forwards 1s;
         }
@@ -208,17 +216,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- รูปภาพด้านซ้าย -->
-        <img src="your-image-path.jpg" alt="Warm Tone Image" class="left-image">
+        
 
         <h1><a href="#">Main Heading</a></h1>
         <h2><a href="#">Subheading</a></h2>
 
         <ul class="nav_list">
             <li><a href="ประวัติ.html">ประวัติ</a></li>
-            <li><a href="สถานที่ที่ชอบ.html">สถานที่ที่ชอบ 2</a></li>
-            <li><a href="สิ่งที่ชอบ.html">สิ่งที่ชอบ 3</a></li>
+            <li><a href="สถานที่ที่ชอบ.html">สถานที่ที่ชอบ</a></li>
+            <li><a href="สิ่งที่ชอบ.html">สิ่งที่ชอบ</a></li>
             <li><a href="อาหารที่ชอบ.html">อาหารที่ชอบ</a></li>
+            <li><a href="เกมที่ชอบ.html">เกมที่ชอบ</a></li>
         </ul>
 
         <div class="popover" id="popover">
