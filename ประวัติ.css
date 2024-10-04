@@ -1,142 +1,226 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-.container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: smooth;
-    background: #131313;
-    font-family:'Helvetica Neue', sans-serif;
-}
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #131313, #3a3a3a);
+            font-family: 'Helvetica Neue', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
 
-h1 a {
-  font-size: 90px;
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-h2 a {
-    font-size: 90px;
-    color: #BF2E97;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    
-  }
+        h1 a {
+            font-size: 90px;
+            color: #000000;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-.popover {
-   display: none;
-   box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
-}
+        h2 a {
+            font-size: 90px;
+            color: #BF2E97;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
-.popover:target {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        .popover {
+            display: none;
+            box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+        }
 
-.popover .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 0;
-  height: 0;
-  color: #c53535;
-  background-color: #191919;
-  animation: 1s grow ease forwards;
-  text-align: center;
-}
+        .popover:target {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.nav_list  {
-  list-style-type: none;
-}
+        .popover .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 0;
+            height: 0;
+            color: #c53535;
+            background-color: #191919;
+            animation: 1s grow ease forwards;
+            text-align: center;
+        }
 
-.nav_list a {
-  text-decoration: none;
-  font-size: 50px;
-  color: #aa3535;
-}
+        .nav_list {
+            list-style-type: none;
+        }
 
-.nav_list_item {
-  height: 100%;
-  overflow: hidden;
-}
+        .nav_list a {
+            text-decoration: none;
+            font-size: 50px;
+            color: #aa3535;
+        }
 
-.nav_list li {
-  padding: 15px 0;
-  text-transform: uppercase;
-  transform: translateY(200px);
-  opacity: 0;
-  animation: 2s slideUp ease forwards .5s;
-  position: relative;
-}
+        .nav_list_item {
+            height: 100%;
+            overflow: hidden;
+        }
 
-.nav_list li::before {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 0px;
-  left: 0;
-  bottom: 10px;
-  background: #BF2E97; 
-  transition: all .5s ease;
-}
+        .nav_list li {
+            padding: 15px 0;
+            text-transform: uppercase;
+            transform: translateY(200px);
+            opacity: 0;
+            animation: 2s slideUp ease forwards .5s;
+            position: relative;
+        }
 
-.nav_list li:hover:before {
-      width: 100%;
-}
+        .nav_list li::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0px;
+            left: 0;
+            bottom: 10px;
+            background: #BF2E97;
+            transition: all .5s ease;
+        }
 
-.popover p {
-  padding: 50px;
-  opacity: 0;
-  animation: 1s fadeIn ease forwards 1s;
-}
+        .nav_list li:hover:before {
+            width: 100%;
+        }
 
-.popover .close::after {
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  display: flex;
-  z-index: 1;
-  font-size: 30px;
-  align-items: center;
-  justify-content: center;
-  background-color: #BF2E97;
-  color: #b63c3c;
-  content: "×";
-  cursor: pointer;
-  opacity: 0; 
-  animation: 1s fadeIn ease forwards .5s;
-}
+        .popover p {
+            padding: 50px;
+            opacity: 0;
+            animation: 1s fadeIn ease forwards 1s;
+        }
 
-@keyframes grow {
-  100% {
-    height: 90%;
-    width: 90%;
- }
-}
+        .popover .close::after {
+            right: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            display: flex;
+            z-index: 1;
+            font-size: 30px;
+            align-items: center;
+            justify-content: center;
+            background-color: #BF2E97;
+            color: #b63c3c;
+            content: "×";
+            cursor: pointer;
+            opacity: 0;
+            animation: 1s fadeIn ease forwards .5s;
+        }
 
-@keyframes fadeIn {
-100% {
-  opacity: 1;
- }
-}
+        .animated-background .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(191, 46, 151, 0.7);
+            animation: move 5s infinite;
+        }
 
-@keyframes slideUp {
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+        .circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 20%;
+        }
+
+        .circle:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 70%;
+        }
+
+        .additional-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 24px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1s;
+        }
+
+        @keyframes grow {
+            100% {
+                height: 90%;
+                width: 90%;
+            }
+        }
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: scale(1) translateX(0);
+            }
+            50% {
+                transform: scale(1.5) translateX(20px);
+            }
+            100% {
+                transform: scale(1) translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="#">Main Heading</a></h1>
+        <h2><a href="#">Subheading</a></h2>
+
+        <ul class="nav_list">
+            <li><a href="#link1">Link 1</a></li>
+            <li><a href="#link2">Link 2</a></li>
+            <li><a href="#link3">Link 3</a></li>
+        </ul>
+
+        <div class="popover" id="popover">
+            <div class="content">
+                <p>This is a popover message!</p>
+                <a href="#" class="close"></a>
+            </div>
+        </div>
+
+        <div class="animated-background">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="additional-content">
+            <p>Welcome to our website!</p>
+            <p>Explore more by clicking the links below.</p>
+        </div>
+    </div>
+</body>
+</html>
